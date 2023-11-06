@@ -10,6 +10,9 @@ pipeline {
         }
         stage("Build"){
             steps {
+                script { 
+                    docker.build('my-note-app')
+                }
                 echo "Building the image"
                 sh "docker build -t my-note-app ."
             }
