@@ -14,7 +14,7 @@ pipeline {
                 echo "Building the image"
                 script {
                     // Use Dockerfile for building the image
-                     def dockerTool = tool name: 'Docker', type: 'Docker'
+                     def dockerTool = tool name: 'Docker', type: 'Tooltype'
                     def dockerImage = docker.build('my-note-app', '-f Dockerfile .')
 
                     // Tag the image
